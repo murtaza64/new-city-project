@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://igpu5cml3bep"]
+
+[ext_resource type="PackedScene" uid="uid://d4dljnnv3luic" path="res://guy.tscn" id="1_8qxr0"]
+[ext_resource type="PackedScene" uid="uid://c4nbcthoxtnah" path="res://block.tscn" id="2_tud3m"]
+[ext_resource type="Script" path="res://game.gd" id="3_w30sb"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("3_w30sb")
+
+[node name="guy" parent="." instance=ExtResource("1_8qxr0")]
+position = Vector2(204, 157)
+scale = Vector2(8, 8)
+
+[node name="block" parent="." instance=ExtResource("2_tud3m")]
+position = Vector2(346, 74)

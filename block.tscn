@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4nbcthoxtnah"]
+
+[ext_resource type="Script" path="res://block.gd" id="1_wvcyv"]
+[ext_resource type="Texture2D" uid="uid://0nkkko1xn3e6" path="res://floor.png" id="2_hlxnv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pbghs"]
+size = Vector2(1, 1)
+
+[node name="Block" type="StaticBody2D"]
+script = ExtResource("1_wvcyv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(4.165, 4.165)
+texture = ExtResource("2_hlxnv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(100, 100)
+shape = SubResource("RectangleShape2D_pbghs")
